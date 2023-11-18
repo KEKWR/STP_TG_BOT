@@ -4,8 +4,7 @@ from aiogram.filters import Command, StateFilter
 from aiogram.fsm.context import FSMContext
 from aiogram.types import Message
 
-from utils.search_aud import updFiles,lastUpd,handing_answ
-import settings
+from utils.scripts.search_aud import updFiles,lastUpd,handing_answ
 import markups
 
 router = Router()
@@ -15,13 +14,7 @@ user_dict: dict[int, dict[str, str | int | bool]] = {}
 
 class FSMDFillForm(StatesGroup):
     fill_prog_name = State()
-
-menuSearch = [
-    [types.KeyboardButton(text="Найти аудиторию",one_time_keyboard=True)],
-    [types.KeyboardButton(text="Обновить базу")],
-    [types.KeyboardButton(text="Последнее обновление")]
-    ]
-
+    
 @router.message(F.text == 'Обновить базу')
 async def upd_b(message: types.Message):
         updFiles()

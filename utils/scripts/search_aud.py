@@ -5,11 +5,11 @@ from datetime import datetime
 
 import docx
 
-import settings
+import data.config as config
 
 def updFiles() -> None:
-    ftp = FTP(getenv('FTP_HOST'))
-    ftp.login(user=getenv('FTP_USER'), passwd=getenv('FTP_PASSWD'))
+    ftp = FTP(config.FTP_HOST)
+    ftp.login(user=config.FTP_USER, passwd=config.FTP_PASSWD)
     ftp.cwd('ukc/Документация/Паспорта аудиторий')
 
     try:
