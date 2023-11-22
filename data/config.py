@@ -18,7 +18,8 @@ whiteList = [
     '316157520',
     '947319785',
     '204618345',
-    '533002094'
+    '533002094',
+    '457256711'
 ]
 
 POSTGRES_URI = f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}/{DB_NAME}'
