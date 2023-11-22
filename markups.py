@@ -30,7 +30,7 @@ inBtndStud = InlineKeyboardButton(text='Учебные заявки',callback_da
 inalertdMenu = InlineKeyboardMarkup(inline_keyboard=[[inBtndAdm],[inBtnadAlert],[inBtndStud]])
 
 #--Non menu button --
-inBtnSource = InlineKeyboardButton(text='Клик',url='https://www.google.com/')
+inBtnSource = InlineKeyboardButton(text='Клик',url='https://github.com/KEKWR/STP_TG_BOT')
 linkSource = InlineKeyboardMarkup(inline_keyboard=[[inBtnSource]])
 
 #---Alert menu---
